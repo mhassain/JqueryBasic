@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JQuery</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p class="text1">Lorem ipsum <b>dolor</b> sit amet.</p>
+    <p class="text2">This is another text here</p>
+    <input type="text" value="What is your name?" />
+    <br />
+
+    <button id="btn-1">Set Text</button>
+    <button id="btn-2">Set Html</button>
+    <button id="btn-3">Set Value</button>
+    <br />
+    <a id="google" href="google.com">Google.com</a>
+
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#btn-1").click(function() {
+          $(".text1").text("change the text");
+        });
+
+        $("#btn-2").click(function() {
+          $(".text2").html("<h2>This is Html</h2>");
+        });
+
+        $("#btn-3").click(function() {
+          $("input").val("My name is: Mahade hasan");
+        });
+
+        $("#google").click(function() {
+          $(this).attr("href", "https://www.facebook.com/");
+        });
+      });
+    </script>
+  </body>
+</html>
